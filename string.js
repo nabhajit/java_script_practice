@@ -40,3 +40,8 @@ console.log(url.split("."));
 
 console.log(url.split(".")[0]);
 
+
+let str = new String("hello world");            // string is immutable
+str[0] = "j"
+
+console.log(str)
