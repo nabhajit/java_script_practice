@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this, call, apply, and bind Demo</title>
+</head>
+<body>
+    <h1>JavaScript: this, call, apply, and bind</h1>
+
+    <button id="callButton">Call Method</button>
+    <button id="applyButton">Apply Method</button>
+    <button id="bindButton">Bind Method</button>
+
+    <div id="output"></div>
+
+    <script>
+        
+        const person = {
+            firstName: "Nabhajit",
+            lastName: "Roy",
+            fullName: function () {
+                
+                return `${this.firstName} ${this.lastName}`;
+            }
+        };
+
+        function greet(greeting, punctuation) {
+            return `${greeting}, ${this.firstName} ${this.lastName}${punctuation}`;
+        }
+
+
+        document.getElementById('callButton').onclick = function() {
+            const result = greet.call(person, "Hello", "!");
+            document.getElementById('output').innerText = "Call result: " + result;
+        };
+
+        document.getElementById('applyButton').onclick = function() {
+            const result = greet.apply(person, ["Hi", "?"]);
+            document.getElementById('output').innerText = "Apply result: " + result;
+        };
+
+        document.getElementById('bindButton').onclick = function() {
+            const boundGreet = greet.bind(person);
+            const result = boundGreet("Hey", "!!");
+            document.getElementById('output').innerText = "Bind result: " + result;
+        };
+
+        console.log("Person's full name using 'this':", person.fullName()); 
+    </script>
+</body>
+</html>
