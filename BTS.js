@@ -9,5 +9,5 @@ EXECUTION CONTEXT  -        (how JS Runs the codes )
     2 Phases of JS--
             ---Memory Execution Phase.
             ---Execution Phase.
-    
+            
 */
