@@ -1,0 +1,119 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>helloworld</h1>
+</body>
+<script>
+    const hello = (a,b)=>{
+        console.log(a+b);
+    }
+    setTimeout(function hell(){hello(20,50)},2000)
+</script>
+</html> -->
+
+<!-- Call-back -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>helloworld</h1>
+</body>
+<script>
+    function hello(name, password) {
+        setTimeout(() => {
+            console.log(`Name is ${name}`);
+            if (typeof name === "string") {
+                password();
+            } else {
+                console.log("Name must be a string.");
+            }
+        }, 2000);
+    }
+
+    // Example Usage
+    hello("John Doe", () => {
+        console.log("Password function called!");
+    });
+</script>
+</html>
+
+
+<!-- Callback-hell -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Hell Example</title>
+</head>
+<body>
+    <h1>Callback Hell Example</h1>
+</body>
+<script>
+    console.log("Start process...");
+
+    setTimeout(() => {
+        console.log("Step 1: Fetching user data...");
+        setTimeout(() => {
+            console.log("Step 2: Verifying user...");
+            setTimeout(() => {
+                console.log("Step 3: Fetching user permissions...");
+                setTimeout(() => {
+                    console.log("Step 4: Processing user data...");
+                    setTimeout(() => {
+                        console.log("Step 5: Finalizing...");
+                        console.log("Process complete!");
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+</script>
+</html>
+
+ <!--WAJS to add two numbers 1st and then check whether the sum is even or odd by implementing the concept of callbacks.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function add(num1, num2,callback) {
+        setTimeout(() => {
+            let a = num1 + num2;
+            console.log(`Addition of ${num1} and ${num2} is ${a}`);
+        }, 2000)
+        check(sum);
+
+    };
+    function check(sum){
+        if(sum % 2 == 0)
+            console.log("Even number");
+        else("odd number")
+    }
+    
+    add(5,3)
+    
+    
+    </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HELLO</h1>
+</body>
+<script>
+    var a = document.querySelector("h1");
+    a.innerHTML = "helloworld";
+    a.style.color = "red";
+
+    a.addEventListener("click", function() {
+        setTimeout(function() {
+            a.style.color = "yellow";
+        }, 10000); // Wait for 10 seconds
+    });
+</script>
+</html>
